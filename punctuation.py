@@ -68,7 +68,6 @@ transitionFill = (0,0,0);
 endSentenceFill = (0,0,0);
 parentheticalFill = (0,0,0);
 
-punct = punct[55000:]
 # getTextSize
 for ii in range(linesOfText):
    for jj in range(symbolsPerLine):
