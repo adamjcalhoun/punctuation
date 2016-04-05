@@ -1,6 +1,7 @@
 import string
 import math
 import sys
+import os.path as osp
 from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
@@ -31,7 +32,16 @@ if (len(sys.argv) > 1):
 else:
    bookname = 'ulysses'
 
-file = open(bookname + '.txt','r')
+# Handle when filename is given without file exteension '.txt'
+if not osp.exists(bookname):
+   print 'File does not exist: '+str(bookname)+' checking with extension txt'
+   bookname = bookname + '.txt'
+
+
+if not osp.exists(bookname):
+   print 'File does not exist: '+str(bookname)
+
+file = open(bookname ,'r')
 txt = file.read()
 file.close()
 
