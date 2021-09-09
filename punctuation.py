@@ -8,19 +8,19 @@ from PIL import ImageDraw
 
 ## VARIABLES
 # size of output canvas in pixels
-canvasHeight = 8000;
-canvasWidth = 8000;
+canvasHeight = 8000
+canvasWidth = 8000
 
 # pixel border width
-trim = 100;
+trim = 100
 
-font1size = 48;
-font2size = 72;
+font1size = 48
+font2size = 72
 
 # number of symbols to be output on each line
-symbolsPerLine = 70;
+symbolsPerLine = 70
 # and the number of lines
-linesOfText = 70;
+linesOfText = 70
 
 # symbolsPerLine = int(math.floor(math.sqrt(len(punct))));
 # linesOfText = int(math.floor(len(punct)/symbolsPerLine));
@@ -40,7 +40,7 @@ include = set(string.punctuation)
 def getPunctuation(s):
    return ''.join(ch for ch in s if ch in include)
 
-punct = getPunctuation(txt);
+punct = getPunctuation(txt)
 
 # file = open('blood-punct.txt','w')
 file = open(bookname + '-punct.txt','w')
@@ -64,9 +64,9 @@ font2 = ImageFont.truetype("GlacialIndifference-Bold.otf", font2size)
 # parentheticalFill = (235,235,235);
 
 # in case you want to change by transition
-transitionFill = (0,0,0);
-endSentenceFill = (0,0,0);
-parentheticalFill = (0,0,0);
+transitionFill = (0,0,0)
+endSentenceFill = (0,0,0)
+parentheticalFill = (0,0,0)
 
 # getTextSize
 for ii in range(linesOfText):
